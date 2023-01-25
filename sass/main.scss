@@ -1,0 +1,15 @@
+//common
+@import "./utils/variables";
+@import "./base/font";
+@import "./base/global";
+@import "./base/mixin";
+
+//components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/loader";
+
+//pages
+
+@import "./pages/index";
+
