@@ -1,6 +1,9 @@
 body{
     background: linear-gradient(256.2deg, #251A6B -0.93%, #0A081F 99.74%);
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     box-sizing: border-box;
+    margin: 0;
 }
