@@ -1,6 +1,5 @@
 header{
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,25 +7,53 @@ header{
         width: 60vw;
         margin-left: 2vw;
     }
+    .toggle-menu{
+        // height: 100%;
+        background-color: #305DFF;
+        width: 16vw;
+        height: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .svg-toggle{
+            width: 50%;
+            height: auto;
+        }
+    }
     .toggle-show{
-        background: linear-gradient(256.2deg, #251A6B -0.93%, #0A081F 99.74%);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background: $main-background;
+        z-index: 999;
+        position: fixed;
+        margin: 0;
+        top: 0;
         width: 100vw;
         height: 100vh;
-        box-sizing: border-box;
-        margin: 0;
-        position: fixed;
-        z-index: 999;
-        .toggle-menu{
-            // height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                margin-bottom: 12vw;
+                a{
+                text-decoration: none;
+                color: white;
+                font-size: 3.5rem;
+                @include goodtimes-200;
+                }
+            }
+        }
+        .toggle-menu2{
             background-color: #305DFF;
             width: 16vw;
             height: 15vw;
             display: flex;
             align-items: center;
             justify-content: center;
-            .svg-toggle{
+            position: absolute;
+            .svg-toggle2{
                 width: 50%;
                 height: auto;
             }
