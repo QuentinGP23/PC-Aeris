@@ -1,19 +1,19 @@
 .accroche{
     h2{
         color: white;
-        @include goodtimes-600;
+        font-family: "Good Times";
+        font-weight: 600;
         position: relative;
         left: 5vw;
         top: 8vw;
     }
     .jsp420{
+        width: 100%;
+        border: none;
         #img-acrr{
             width: 50%;
             height: auto;
             border-radius: 23.7838px 0px 23.7838px 23.7838px;
-            position: relative;
-            top: 8vw;
-            left: 5vw;
         }
     }
 }
