@@ -7,56 +7,62 @@ header{
         width: 60vw;
         margin-left: 2vw;
     }
-    .toggle-menu{
-        // height: 100%;
+    .toggle {
+        cursor: pointer;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #305DFF;
-        width: 16vw;
-        height: 15vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .svg-toggle{
-            width: 50%;
-            height: auto;
-        }
-    }
-    .toggle-show{
-        background: $main-background;
-        z-index: 999;
-        position: fixed;
-        margin: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        ul{
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            li{
-                margin-bottom: 12vw;
-                a{
-                text-decoration: none;
-                color: white;
-                font-size: 3.5rem;
-                @include goodtimes-200;
-                }
-            }
-        }
-        .toggle-menu2{
-            background-color: #305DFF;
-            width: 16vw;
-            height: 15vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            .svg-toggle2{
-                width: 50%;
-                height: auto;
+        .line-toggle {
+            &:nth-child(2) {
+                transition-delay: .12s;
             }
         }
     }
+    .line-toggle {
+        position: absolute;
+        display: block;
+        width: 75px;
+        height: 7px;
+        background: white;
+        transition: all .6s;
+        &:first-child {
+            transform: translateY(-30px) translateX(-12px);
+            width: 50px;
+            transition-delay: 0s;
+        }
+        &:last-child {
+            transform: translateY(30px) translateX(-22px);
+            width: 30px;
+            transition-delay: 0s;
+        }
+    }
+    .toggle.activate {
+        .line-toggle {
+            &:first-child {
+                background: orangered;
+                transform: translateY(0) translateX(0) rotate(45deg);
+                width: 90px;
+                height: 8px;
+                transition-delay: .1s;
+            }
+            &:nth-child(2) {
+                transform: translateX(110px);
+                transition-delay: 0s;
+            }
+            &:last-child {
+                background: orangered;
+                transform: translateY(0) translateX(0) rotate(314deg);
+                width: 90px;
+                height: 8px;
+                transition-delay: .1s;
+            }
+        }
+    }
+    
 }
