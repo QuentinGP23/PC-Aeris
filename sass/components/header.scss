@@ -29,7 +29,9 @@ header{
         margin-block-start: 0;
         padding-inline-start: 0;
         margin-block-end: 0;
+        display: none;
         li{
+            margin-bottom: 8vh;
             a{
                 color: white;
                 text-decoration: none;

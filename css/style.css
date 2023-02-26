@@ -16,10 +16,6 @@ body {
   margin: 0;
 }
 
-main {
-  display: none;
-}
-
 header {
   width: 100%;
   height: auto;
@@ -51,6 +47,10 @@ header ul {
   margin-block-start: 0;
   padding-inline-start: 0;
   margin-block-end: 0;
+  display: none;
+}
+header ul li {
+  margin-bottom: 8vh;
 }
 header ul li a {
   color: white;
