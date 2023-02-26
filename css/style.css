@@ -1,18 +1,148 @@
-/* Error: unmatched "}".
- *    ,
- * 96 | }
- *    | ^
- *    '
- *   sass\components\header.scss 96:1  @import
- *   sass\main.scss 8:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a    \2577 \a 96 \2502  }\d\a    \2502  ^\a    \2575 \a   sass\\components\\header.scss 96:1  @import\a   sass\\main.scss 8:9                root stylesheet';
+@font-face {
+  font-family: "Good Times";
+  src: url("/fonts/good_times_bd_it-webfont.woff2") format("woff2"), url("/fonts/good_times_bd-webfont.woff2") format("woff2"), url("/fonts/good_times_bk_it-webfont.woff2") format("woff2"), url("/fonts/good_times_rg-webfont.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Matonne";
+  src: url("/fonts/Mattone-Regular.woff2") format("woff2");
+}
+body {
+  background: linear-gradient(256.2deg, #251A6B -0.93%, #0A081F 99.74%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-logo {
+  width: 60vw;
+  margin-left: 2vw;
+}
+header .toggle-menu {
+  background-color: #305DFF;
+  width: 16vw;
+  height: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .toggle-menu .svg-toggle {
+  width: 50%;
+  height: auto;
+}
+header ul {
+  list-style: none;
+  position: absolute;
+  top: 22%;
+  left: 30%;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+}
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Good Times";
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.loader {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/logo/logov5.1print.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  top: 0;
+  left: 0;
+  animation: dispone 0.1s normal forwards;
+  animation-delay: 3s;
+}
+.loader .loadbar {
+  position: fixed;
+  height: 3%;
+  bottom: 10%;
+  left: 30%;
+  box-sizing: border-box;
+}
+.loader #front {
+  z-index: 1;
+  width: 0%;
+  background: #f7c91f;
+  opacity: 0;
+  animation: bargrow ease-in-out 3s infinite;
+}
+.loader #back {
+  z-index: 2;
+  width: 40%;
+  border: 0.2rem solid #a9dde9;
+  box-shadow: 0px 0px 21px 0px #a9dde9;
+  -webkit-box-shadow: 0px 0px 21px 0px #a9dde9;
+}
+
+@keyframes bargrow {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    width: 40%;
+    opacity: 1;
+  }
+}
+@keyframes dispone {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.accroche h2 {
+  color: white;
+  font-family: "Good Times";
+  font-weight: 600;
+  position: relative;
+  left: 3vw;
+  top: 8vw;
+  font-size: 1.6rem;
+}
+.accroche .jsp420 {
+  width: 100%;
+  border: none;
+}
+.accroche .jsp420 #img-acrr {
+  width: 50%;
+  height: auto;
+  border-radius: 23.7838px 0px 23.7838px 23.7838px;
+  position: relative;
+  left: 3vw;
+  top: 4vh;
+}
+
+/*# sourceMappingURL=style.css.map */
